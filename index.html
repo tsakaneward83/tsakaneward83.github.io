@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <title> Ekurhuleni Ward 83</title>
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+   <script scr="https://code.jquery.com/jquery.com/jquery-3.3.1.slim.min.js"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   <!--------resume style---------------------->
+   <style>
+      /* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 400px;
+  height: 250px;
+  background-color: rgb(245, 212, 28);;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 100%;
+  margin-left: -80px;
+  margin-bottom:-40%;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+/* ---------------------------------------------------------------------- */
+   .topnav {
+  overflow: hidden;
+  background-color: #333;
+  height:10%;
+}
+
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: rgb(245, 212, 28);
+  color: black;
+}
+
+.topnav a.active {
+  background-color: rgb(245, 212, 28);
+  color: white;
+}
+      .banelek {
+         width: 80%;
+         height: 100px;
+         background-color: red;
+         position: relative;
+         animation: myfirst 5s linear 2s infinite alternate;
+         border-top-right-radius: 50px;
+
+         border-bottom-right-radius: 50px;
+      }
+
+      @keyframes myfirst {
+         0% {
+            background-color: red;
+            left: 0px;
+            top: 0px;
+         }
+
+         25% {
+            background-color: yellow;
+            left: 200px;
+            top: 0px;
+         }
+
+         50% {
+            background-color: blue;
+            left: 200px;
+            top: 200px;
+         }
+
+         75% {
+            background-color: #ccffbd;
+            left: 0px;
+            top: 200px;
+         }
+
+         100% {
+            background-color: #a7c5eb;
+            left: 0px;
+            top: 0px;
+         }
+      }
+
+      /* ----waves---- */
+  
+
+     /* -------------Rotattion--------------------------------- */
+     #earth {
+position: relative;
+width: 300px;
+height: 300px;
+margin: 3em auto; 
+background: #888 url(https://lh5.googleusercontent.com/-kkxEx-SkRaY/VBLF4BV2lZI/AAAAAAAAKao/FnKsv7402_c/s0/earthmap.jpg) 0 0 repeat;
+border-radius: 50%;
+-moz-border-radius: 50%;
+-webkit-border-radius: 50%;
+-ms-border-radius: 50%;
+-o-border-radius: 50%;
+background-size: 630px;
+animation: rotate 4s linear infinite;
+-webkit-animation: rotate 4s linear infinite;
+-moz-animation: rotate 4s linear infinite;
+-ms-animation: rotate 4s linear infinite;
+-o-animation: rotate 4s linear infinite;
+-webkit-transition: -webkit-transform 200ms linear;
+-webkit-transform-style: preserve-3d;
+-moz-transition: -moz-transform 200ms linear;
+-moz-transform-style: preserve-3d;
+transition: transform 200ms linear;
+transform-style: preserve-3d;
+box-shadow: inset 20px 0 80px 6px rgba(0, 0, 0, 1);
+-moz-box-shadow: inset 20px 0 80px 6px rgba(0, 0, 0, 1);
+-webkit-box-shadow: inset 20px 0 80px 6px rgba(0, 0, 0, 1);
+color: #000;
+}
+
+#earth:before {
+content: "";
+position: absolute;
+top: 0%;
+left: 0%;
+width: 100%;
+height: 100%;
+border-radius: 50%;
+-moz-border-radius: 50%;
+-webkit-border-radius: 50%;
+-ms-border-radius: 50%;
+-o-border-radius: 50%;
+box-shadow: -80px 15px 80px 10px rgba(0,0,0,.9) inset;
+-moz-box-shadow: -80px 15px 80px 10px rgba(0,0,0,.9) inset;
+-webkit-box-shadow: -80px 15px 80px 10px rgba(0,0,0,.9) inset;
+z-index: 2;
+}
+
+#earth:after {
+content: "";
+position: absolute;
+border-radius: 50%;
+-moz-border-radius: 50%;
+-webkit-border-radius: 50%;
+-ms-border-radius: 50%;
+-o-border-radius: 50%;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+opacity: 0.2;
+background: radial-gradient(circle at 100px 100px, #fff, #000);
+}
+
+
+@keyframes rotate {
+0% {background-position: 0 0;}
+100% {background-position: 630px 0;}
+}
+
+
+@-moz-keyframes rotate {
+0% {background-position: 0 0;}
+100% {background-position: 630px 0;}
+}
+
+
+@-webkit-keyframes rotate {
+0% {background-position: 0 0;}
+100% {background-position: 630px 0;}
+}
+
+
+@-ms-keyframes rotate {
+0% {background-position: 0 0;}
+100% {background-position: 630px 0;}
+}
+
+
+@-o-keyframes rotate {
+0% {background-position: 0 0;}
+100% {background-position: 630px 0;}
+}
+ /* Chrome */
+ progress::-webkit-progress-bar {
+    background-color: red;
+}
+
+
+          
+   </style>
+
+
+</head>
+
+<!----Slider resources fiels-->
+<!-- Start WOWSlider.com HEAD section -->
+<link rel="stylesheet" type="text/css" href="assets/slider/engine1/style.css" />
+<script type="text/javascript" src="assets/slider/engine1/jquery.js"></script>
+<!-- End WOWSlider.com HEAD section -->
+
+<body>
+
+   
+  
+   
+   <!----Slider goes here-------------->
+   <div class="topnav">
+      <a class="active" href="/index.html"><b>HOME</b></a>
+      <a href="#woza1"><i class="fa fa-user" style="color: white;"></i>2</a>
+      <a href="#tools"><i class="fa fa-wrench"  style="color: white;">3</i></a>
+      <a href="#cv"> <i class="fa fa-file" style="color: white;"></i>4</a>
+      <a href="#what"><i class="fa fa-question" style="color: white;"></i>4</a>
+      <a href="#call"><i class="fa fa-phone" style="color: white;"></i>5</a> 
+      
+     <div>
+        <h1 style="color: rgb(245, 212, 28);margin-left: 35%;">
+         
+             Ekurhuleni Ward 83
+         
+        </h1>
+     </div>
+    </div>
+
+
+
+  
+
+   <div style="width: 100%;background:#333; border-top-right-radius: 400px;
+     border-bottom-left-radius: 250px;">
+      <div class="container">
+         
+         <img src="images/gallery/ekurhuleni.jfif" style="width: 85px;height:80px; margin-left: 95%;margin-top: -50px;">
+      </div>
+      <h2 style="color: rgb(245, 212, 28); display: flex;flex-direction: column; justify-content: center;align-items: center;">
+         Mphakathi Dumelang, welcome to our ward. <br>
+          This is our portfolio website for all our Tsakane Ward 83 residents.</h2>
+      <br>
+      <div class="container" style="width: 80%;height: 40%; margin-left: 10%;
+      display: flex; flex-direction: column; justify-content: center;align-items: center">
+      <br>
+        <br>
+         <owl-carousel-o [options]="customOptions">
+            <ng-template carouselSlide>
+              <img src="images/gallery/ekurhuleni.jfif">
+              
+            </ng-template>
+            <ng-template carouselSlide>
+              
+              <img src="images/gallery/vote.png" style="width: 200px; height: 200px;">
+              
+            </ng-template>
+            <ng-template carouselSlide>
+              <img src="images/gallery/flag.jpg" style="width: 200px; height: 200px;">
+            </ng-template>
+            <ng-template carouselSlide>
+              <img src="images/gallery/ekurhuleni.jfif">
+            </ng-template>
+          </owl-carousel-o>
+          <br><br>
+      </div>
+
+
+      
+   </div>
+
+   <!----Slider ends here-------------->
+
+
+<section id="woza1">
+   <div class="card" style="border-top-left-radius:150px; border-bottom-right-radius: 150px;
+   border-bottom-left-radius: 150px;
+   background:rgb(245, 212, 28);">
+      <div class="row">
+         <div class="col">
+            <div class="container" style=" margin-left: 5%; display: flex; flex-direction: column;"> <br>
+               <img src="images/gallery/slindo.jpg" style="border-radius: 50%; height: 280px; width: 280px;">
+               <br>
+               <div style="width: 70%;margin-top: -17%; margin-left:23%">
+                  <h2 style="font-style: oblique;color: white"><b>Slindokuhle Pike</b></h2> <br><br>
+               <p style="color:#333 ;"><b>Your chosen ward councillor for this term, a highly active young woman who strive  to serve the community <br> truthfully with pure intentions and transparency.
+               A motivated individual who believes in community upliftments for all.  <br> I am willing to keep the youth active in community activities, helping our elders in all forms and keeping a safe community and making a warmly ward for the kids.</b> </p>
+               <br>
+               </div>
+               <div class="card" style=" width:70%; margin-left: 10%;border-bottom-right-radius:300px;display:flex;">
+                  <div class="row">
+                     <div class="col">
+                        <i class="fas fa-hammer" style="width:4%"></i>
+                        <div class="container">
+                           <h1 style="color: rgb(245, 212, 28);"><b>YOUTH ACTIVITIES</b></h1>
+                           
+                     </div>
+                  </div>
+               </div>
+               <br>
+              <div style="display: flex; flex-direction: row;margin-left: 80%;">
+               <div class="card" style="width: 40px; height: 40px;border-radius: 50%;"></div> &nbsp;&nbsp;&nbsp;
+               <div class="card" style="width: 40px; height: 40px;border-radius: 50%;"></div> &nbsp;&nbsp;&nbsp;&nbsp;
+               <div class="card" style="width: 40px; height: 40px;border-radius: 50%;"></div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </div>
+
+            </div>
+         </div>
+      </div>
+      <br>
+   </div>
+</section>
+
+<br>
+   <section id="tools">
+      <div style="width: 100%; height: 40%;">
+         <!-- --------------------------------  -->
+         <h1 style="margin-left: 45%; color:white;">Projects</h1>
+         <br>
+         
+         <div class="w3-container" style="display:flex; flex-direction:row">
+            <br><br>
+            
+              <div class="w3-card-4" style="width:50%; background:rgba(216, 215, 215, 0.877);">
+                <img src="images/gallery/opportunity.jpg"  style="width:100%;height: 200px;">
+                <div class="w3-container w3-center">
+                  <p style="margin-left: 35%;"><b>Opportunities</b></p>
+                </div>
+              </div>
+              <div class="w3-card-4" style="width:50%; background:rgba(216, 215, 215, 0.877); margin-left:5%;">
+                <img src="images/gallery/suggestions.jfif"  style="width:100%; height: 200px;">
+                <div class="w3-container w3-center">
+                  <p style="margin-left: 40%;"><b>Suggestions</b></p>
+                </div>
+              </div>
+              <div class="w3-card-4" style="width:50%; background:rgba(216, 215, 215, 0.877); margin-left:5%;">
+                <img src="images/gallery/complaint.jpg"  style="width:100%;height: 200px;">
+                <div class="w3-container w3-center">
+                  <p style="margin-left: 40%;"><b>Complaints</b></p>
+                </div>
+              </div>
+            </div>  <br>
+         
+    </div>
+
+   </section>
+
+
+   <!----------------------------------------------------------------------------->
+
+   <section id="cv">
+      <div class="container text-center">
+         <!-- <h1>Hello world 2</h1> -->
+      </div>
+      <br>
+   </section>
+
+
+   <!------------------------------------------------------------------------------------>
+
+   <!------------------------About me Section------------------------------------->
+
+   <section id="what2" style="background: rgb(245, 212, 28); border-top-left-radius: 80px;border-top-right-radius: 80px;">
+      <div class="container">
+         <br>
+         <h1 style="display: flex;flex-direction: row;justify-content: center;color: white;">Testimonies and Comments</h1> <br>
+           <div style="margin-left: 10%;">
+            <img src="images/gallery/zamo.jpg" style="margin-left: 65%;width: 90px; height: 70px;border-radius: 50%; margin-top: -10px;"> <br><br><br>
+            <p style="color:#333; margin-top: -9%;margin-left: 5%;"><b> <br> Keping the youth active and raising awareness with our own councillor.<br> Door to door campaign, encouuring people to go vote
+               "A reading nation is a winning nation!".</b> </p>
+               <br> <br>
+           </div>
+           <br>
+           <div style="margin-left: 10%;">
+            <img src="images/gallery/vote.png" style="width: 90px; height: 70px;border-radius: 50%;margin-left: 3%;"> <br><br><br>
+            <p style="color:white; margin-top: -9%;margin-left: 10%;"><br><b>&nbsp;&nbsp;&nbsp;People must come check the registration status and new comers will find our own trained official.</b> </p>
+               <br> <br>
+           </div>
+           <br><br><br>
+           <div style="margin-left: 20%;">
+            <img src="images/gallery/covid.jfif" style="margin-left: 60%;width: 90px; height: 70px;border-radius: 50%"> <br><br><br><br><br>
+            <p style="color:#333; margin-top: -11%;"><b>Covid variant Omicron rising rapidly and people must keep safe, wear your masks </b> </p>
+               <br> <br> <br>
+           </div>
+               
+            
+           
+         
+      </div>
+   </section>
+   <!------------------------Social media------------------------------------->
+   <section id="call">
+      <div class="container text-center" style="display: flex; flex-direction: column;
+      justify-content: center;align-items: center;">
+         <br>
+         <h3 style="color:#333">Follow us on the following platforms...</h3> <br>
+         <div class="social-icons">
+            
+            <a href="#"><img src="images/media/insta.png"></a>
+            <a href="#"><img src="images/media/twitter.jpg"></a>
+            <a href="#"><img src="images/media/facebook.png"></a>
+            <a href="#"><img src="images/media/what.png"></a>
+         </div>
+      </div>
+   </section>
+   <!------------------------footer------------------------------------>
+   <div class="banelek" style="font-size:40px; color:white; height: 10%; background: red;">
+      <center>Thank You!!!</center>
+   </div>
+   <div style="display: flex; flex-direction: column;justify-content: center;align-items: center; color: red;">
+      <h3>Khumalo Events 2021</h3>
+   </div>
+</html>

@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,500;1,700&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+}
+body
+{
+    background: #fff;
+    font-size: 14px;
+    line-height: 22px;
+    color: #fff;
+}
+.bold
+{
+ font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.resume
+{
+    width: 800px;
+    height: auto;
+    display: flex;
+    margin:  50px auto;
+}
+.resume .resume_left
+{
+    width: 300px;
+    background: #585c68;
+}
+.resume_profile
+{
+    width: 80%;
+    height: 280px;
+}
+.resume .resume_left .resume_profile img
+{
+    margin: 40px auto;
+    margin-left: 25px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    display: block;
+    border: 8px solid #fff;
+    width: 100%;
+    height: 90%;
+}
+#btn_1
+{
+    background-color: #fff;
+    width: 80px;
+}
+
+/*------------------------------RHS*/
+.resume .resume_right
+{
+    width: 520px;
+    background: #fff;
+    color: #585c68;
+    padding: 25px;
+}
+.resume .resume_right .bold
+{
+    color: #585c68;
+}
+.resume .resume_right .resume_work ul,
+.resume .resume_right .resume_education ul
+{
+    padding-left: 40px;
+    overflow: hidden;
+    
+}
+.date
+{
+    text-align: right;
+    color: lightgray;
+}
